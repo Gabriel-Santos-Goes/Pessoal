@@ -1,16 +1,21 @@
 *{   /* todo o site */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
 }
 
 header{   /* cabeçalho */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: black (244, 242, 238);
+    justify-content: space-around;
+    background-color: #c2cebf;
     position: sticky;
     top: 0.5px;
+    padding: 10px;
 }
 
 #img{ /* imagens */
@@ -22,27 +27,36 @@ header{   /* cabeçalho */
 
 .imagem{
     height: 300px;
-    width: 300px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
 }
 
 nav > ul > li{    /* navegação */
-   margin: 20px; 
-   padding: 10px;
-   list-style-type: none;
+    margin: 20px;
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    letter-spacing: 2px;
 }
+
 
 a{
     text-decoration: none;
     margin-left: 30px;
     font-size: 20px;
-    color: #000000 ;
+    color: black;
+    transition: 0.5s;
 }
 
 a:hover{
-    color:#81bda4 (143, 15, 15);
+    opacity: 0.7;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
 }
  
 main{      /* principal */
@@ -89,11 +103,11 @@ p{
 .BolodeFubá{    /* bolo de fubá*/
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;    
 }
 
 article{
-    background-color: #f6aa93;
+
     height: 70%;
     margin: 30px;
     flex: 2;
@@ -119,12 +133,10 @@ aside{
 }
 
 article{
-    background-color: #f6aa93;
     height: 70%;
     margin: 30px;
     flex: 2;
     padding: 20px;
-
 }
 
 aside{
@@ -150,11 +162,9 @@ article{
     margin: 30px;
     flex: 2;
     padding: 20px;
-
 }
 
 aside{
-
     text-align:center;
     height: 300px;
     width: 300px;
@@ -164,10 +174,66 @@ aside{
     flex: 1;
 }
 
-h1{
-    text-align: center;
+.mobile-menu{
+    cursor: pointer;
+    display: none;
 }
 
-p{
-    font-weight: bold;
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff ;
+    margin: 8px;
+}
+
+@media (max-width: 720px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #c2cebf;
+        justify-content: space-around;
+        transform: translateX(100%);
+        color: #050404;
+        transition: transform 0.5s ease-in;
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }    
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
 }

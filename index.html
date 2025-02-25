@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header> <!-- cabeçalho -->
-        <img id="img" src="download.png" alt="foto"> <!-- logo -->
-        <h1>Sabor & Arte em Cada Fatia</h1><!-- Titulo -->
-        <nav><!-- area de navegação  -->
-            <ul>
+    <header>  <!-- cabeçalho -->
+        
+            <h1>Sabor & Arte em Cada Fatia</h1>  <!-- Titulo -->
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+    
+        <nav> <!-- Área de navegação  -->
+            <ul class="nav-list">
                 <li>
                     <a href="index.html" class="link-nav">home</a> <!-- Links -->
                     <a href="aboutus.html" class="link-nav">about us</a><!-- Links -->
@@ -22,10 +28,10 @@
     </header>
 
     <main>
-        <h2>Bolo de Fubá</h2> <!-- bolo de fubá -->
+        <h2>Bolo de Fubá</h2>  <!-- bolo de fubá -->
         <section class="BolodeFubá"> 
             <aside>
-                <img class="imagem" src="download.jfif" alt="bolo de fubá">
+                <img class="imagem" src="imgs/download.jfif" alt="bolo de fubá">
             </aside>
             <article>
 
@@ -60,7 +66,7 @@
             <h2>Bolo De Cenoura</h2>   <!-- bolo de cenoura -->
         <section class="receita-2">
             <aside>
-                <img class="imagem" src="download (2).jfif" alt="bolo de cenoura">
+                <img class="imagem" src="imgs/download (2).jfif" alt="bolo de cenoura">
             </aside>
             <article>
                 <h4 class="ingredi">Ingredientes (Massa):</h4>    
@@ -110,7 +116,7 @@
         <h2>Bolo de Limão</h2>
         <section class="receita-3">
             <aside>
-                <img class="imagem" src="download (1).jfif" alt="bolo de limão">
+                <img class="imagem" src="imgs/download (1).jfif" alt="bolo de limão">
                 </aside>
             <article>
 
@@ -145,12 +151,10 @@
     <footer>
         <marquee behavior="" direction="right">gabriel santos goes</marquee>
     </footer>
-    <script>
-        /*var nome = window.prompt("qual é o seu nome ?")
-        window.confirm("tem certeza?")
-        window.alert("prazer em conhece-lo " + nome)*/
-        
 
-    </script>
+
+
+    
+    <script src="mobile-nevbar.js"></script>
 </body>
 </html>
